@@ -1,17 +1,28 @@
 {
-    "name": "Hello world",
-    "version": "1",
-    "slug": "hello_world",
-    "description": "My first real add-on!",
+    "name": "Docker Proxy",
+    "version": "dev",
+    "slug": "docker_proxy",
+    "description": "Manage your Docker environment with ease",
+    "advanced": true,
+    "startup": "services",
+    "homeassistant": "2021.4.0",
     "arch": [
         "armhf",
-        "armv7",
-        "aarch64",
-        "amd64",
-        "i386"
+        "armv7"
     ],
-    "startup": "application",
-    "boot": "auto",
-    "options": {},
-    "schema": {}
+    "init": false,
+    "map": [
+        "ssl"
+    ],
+    "ports": {
+        "2375/tcp": null
+    },
+    "ports_description": {
+        "2375/tcp": "Agent Api to get docker info."
+    },
+    "hassio_api": true,
+    "docker_api": true,
+    "schema": {
+        "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
+    }
 }
