@@ -7,11 +7,8 @@
     "startup": "services",
     "homeassistant": "2021.4.0",
     "arch": [
-        "aarch64",
         "amd64",
-        "armhf",
-        "armv7",
-        "i386"
+        "arm64v8"
     ],
     "init": false,
     "ports": {
@@ -41,5 +38,4 @@
         "keyfile": "str",
         "leave_front_door_open": "bool?"
     },
-    "image": "docker.elastic.co/elasticsearch/elasticsearch:7.12.1"
 }

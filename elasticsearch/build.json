@@ -1,9 +1,0 @@
-{
-    "build_from": {
-        "armhf": "docker.elastic.co/elasticsearch/elasticsearch:7.12.1"
-    },
-    "squash": false,
-    "args": {
-        "discovery.type": "single-node"
-    }
-}
