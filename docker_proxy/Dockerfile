@@ -2,13 +2,12 @@ FROM haproxy:1.9-alpine
 
 RUN apk add --no-cache python3
 
-EXPOSE 2375
 ENV ALLOW_RESTARTS=0 \
     AUTH=0 \
     BUILD=0 \
     COMMIT=0 \
     CONFIGS=0 \
-    CONTAINERS=0 \
+    CONTAINERS=1 \
     DISTRIBUTION=0 \
     EVENTS=1 \
     EXEC=0 \
