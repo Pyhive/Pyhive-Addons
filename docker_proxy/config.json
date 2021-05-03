@@ -1,6 +1,6 @@
 {
     "name": "Docker Proxy",
-    "version": "0.03",
+    "version": "0.04",
     "slug": "docker_proxy",
     "description": "Manage your Docker environment with docker proxy",
     "url": "https://github.com/Pyhass/Addons",
@@ -8,7 +8,6 @@
     "ingress": true,
     "ingress_port": 0,
     "startup": "services",
-    "panel_icon": "mdi:docker",
     "homeassistant": "0.92.0b2",
     "arch": [
         "aarch64",
