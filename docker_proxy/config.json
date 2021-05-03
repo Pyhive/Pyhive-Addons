@@ -1,6 +1,6 @@
 {
     "name": "Docker Proxy",
-    "version": "0.02",
+    "version": "0.03",
     "slug": "docker_proxy",
     "description": "Manage your Docker environment with docker proxy",
     "url": "https://github.com/Pyhass/Addons",
