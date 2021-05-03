@@ -22,6 +22,7 @@
     ],
     "hassio_api": true,
     "docker_api": true,
+    "host_network": true,
     "schema": {
         "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
     }
