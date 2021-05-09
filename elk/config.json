@@ -1,8 +1,8 @@
 {
-    "name": "Elastic Search",
+    "name": "Elk",
     "version": "dev",
-    "slug": "elasticsearch",
-    "description": "AWS Elastic search for storing events",
+    "slug": "elk",
+    "description": "AWS ELK for storing events",
     "panel_icon": "mdi:aws",
     "startup": "services",
     "homeassistant": "2021.4.0",
@@ -13,8 +13,11 @@
     ],
     "init": false,
     "ports": {
+        "5044/tcp": 5044,
+        "5601/tcp": 5601,
         "9200/tcp": 9200,
-        "9300/tcp": 9300
+        "9300/tcp": 9300,
+        "9600/tcp": 9600
     },
     "ports_description": {
         "9200/tcp": "DNS server port",
