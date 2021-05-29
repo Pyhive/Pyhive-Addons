@@ -1,7 +1,7 @@
 # Dockerfile for ELK stack
 # Elasticsearch, Logstash, Kibana 7.12.0
 
-FROM elasticsearch:7.13.0-arm64
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.13.0-arm64
 ARG ELK_VERSION=7.13.0
 LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 
