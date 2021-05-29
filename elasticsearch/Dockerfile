@@ -8,6 +8,8 @@ LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 ### Elasticsearch config
 ENV ES_PATH_CONF=/etc/elasticsearch
 COPY elasticsearch.yml ${ES_PATH_CONF}/elasticsearch.yml
+COPY jvm.options ${ES_PATH_CONF}/jvm.options
+COPY jvm.options.d/jvm.options ${ES_PATH_CONF}/jvm.options.d/jvm.options
 
 
 EXPOSE 9200
