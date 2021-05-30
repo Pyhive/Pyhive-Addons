@@ -14,3 +14,5 @@ COPY jvm.options.d/jvm.options ${ES_PATH_CONF}/jvm.options.d/jvm.options
 
 EXPOSE 9200
 
+RUN "chmod g+w /etc/elasticsearch"
+
