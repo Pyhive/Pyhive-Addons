@@ -17,6 +17,7 @@
         "9200/tcp": "DNS server port"
     },
     "host_network": true,
+    "apparmor": false,
     "map": [
         "addons:rw"
     ],

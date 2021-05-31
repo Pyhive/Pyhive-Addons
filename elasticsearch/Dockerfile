@@ -15,11 +15,6 @@ COPY elasticsearch.yml ${ES_PATH_CONF}/elasticsearch.yml
 COPY jvm.options ${ES_PATH_CONF}/jvm.options
 COPY jvm.options.d/jvm.options ${ES_PATH_CONF}/jvm.options.d/jvm.options
 
-RUN mkdir ${ES_HOME} \
-    && groupadd -r elasticsearch -g ${ES_GID} \
-    && useradd -r -s /usr/sbin/nologin -M -d ${ES_HOME} -c "Elasticsearch service user" -u ${ES_UID} -g elasticsearch elasticsearch \
-    && chown -R elasticsearch:elasticsearch ${ES_HOME}  ${ES_CONF}
-
 EXPOSE 9200
 
 
