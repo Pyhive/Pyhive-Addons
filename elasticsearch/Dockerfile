@@ -15,7 +15,6 @@ COPY jvm.options.d/jvm.options ${ES_CONF}/jvm.options.d/jvm.options
 
 EXPOSE 9200
 
-RUN mkdir /share/elasticsearch \
-    && chown elasticsearch:elasticsearch -R /share/elasticsearch
+RUN mkdir /share/elasticsearch
 
 
