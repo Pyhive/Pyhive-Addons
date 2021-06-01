@@ -7,14 +7,14 @@ LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 
 ### Elasticsearch config
 ENV ES_CONF=/usr/share/elasticsearch/config \
-    ES_HOME=/opt/elasticsearch \
-    ES_GID=991 \
-    ES_UID=991
+    ES_HOME=/opt/elasticsearch
 
 COPY elasticsearch.yml ${ES_CONF}/elasticsearch.yml
 COPY jvm.options ${ES_CONF}/jvm.options
 COPY jvm.options.d/jvm.options ${ES_CONF}/jvm.options.d/jvm.options
 
 EXPOSE 9200
+
+RUN "sudo chown -R 1000:1000 /data"
 
 
