@@ -7,7 +7,8 @@ ARG ELK_VERSION=7.13.0
 LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 RUN set -eux; \
     mkdir -p /data/elasticsearch; \
-    chown elasticsearch:elasticsearch /data/elasticsearch;
+    chown elasticsearch:elasticsearch /data/elasticsearch; \
+    chmod +rwx /data/elasticsearch
 
 
 ### Elasticsearch config
