@@ -1,16 +1,14 @@
 # Dockerfile for ELK stack
-# Elasticsearch, Logstash, Kibana 7.12.0
+# Kibana 7.13.0
 
-FROM elasticsearch:7.13.0-arm64
+FROM docker.elastic.co/kibana/kibana:7.13.0-arm64
 ARG ELK_VERSION=7.13.0
 LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 
-### Elasticsearch config
-ENV ES_PATH_CONF=/etc/elasticsearch/
-COPY elasticsearch.yml ${ES_PATH_CONF}
+### Kibana config
+ENV ES_CONF=/usr/share/kibana/config
 
 
-EXPOSE 9200
-VOLUME /data
+COPY kibana.yml ${ES_CONF}/kibana.yml
 
-CMD [ "/usr/local/bin/start.sh" ]
+EXPOSE 5601

@@ -1,0 +1,28 @@
+{
+    "name": "Elasticsearch",
+    "version": "dev",
+    "slug": "elasticsearch",
+    "description": "Elasticsearch for storing events",
+    "startup": "application",
+    "homeassistant": "2021.4.0",
+    "init": false,
+    "arch": [
+        "armhf",
+        "armv7"
+    ],
+    "ports": {
+        "5601/tcp": 5601
+    },
+    "ports_description": {
+        "5601/tcp": "DNS server port"
+    },
+    "host_network": true,
+    "apparmor": false,
+    "stage": "experimental",
+    "options": {
+        "log_level": "warning"
+    },
+    "schema": {
+        "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
+    }
+}

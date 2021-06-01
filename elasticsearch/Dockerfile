@@ -7,7 +7,8 @@ ARG ELK_VERSION=7.13.0
 LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 
 ### Elasticsearch config
-ENV ES_CONF=/usr/share/elasticsearch/config
+ENV ES_CONF=/usr/share/elasticsearch/config \
+    logger.level=WARN
 
 COPY elasticsearch.yml ${ES_CONF}/elasticsearch.yml
 COPY jvm.options ${ES_CONF}/jvm.options
