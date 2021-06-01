@@ -1,0 +1,25 @@
+{
+    "name": "Packetbeat",
+    "version": "dev",
+    "slug": "packetbeat",
+    "description": "Packetbeat capture HTTP traffic",
+    "startup": "application",
+    "homeassistant": "2021.4.0",
+    "init": false,
+    "privileged": [
+        "NET_ADMIN"
+    ],
+    "arch": [
+        "armhf",
+        "armv7"
+    ],
+    "host_network": true,
+    "apparmor": false,
+    "stage": "experimental",
+    "options": {
+        "log_level": "warning"
+    },
+    "schema": {
+        "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
+    }
+}
