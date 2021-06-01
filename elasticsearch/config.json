@@ -5,6 +5,7 @@
     "description": "Elasticsearch for storing events",
     "startup": "application",
     "homeassistant": "2021.4.0",
+    "init": false,
     "arch": [
         "armhf",
         "armv7"
