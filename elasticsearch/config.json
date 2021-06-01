@@ -3,13 +3,13 @@
     "version": "dev",
     "slug": "elasticsearch",
     "description": "Elasticsearch for storing events",
-    "startup": "services",
+    "startup": "application",
+    "boot": "auto",
     "homeassistant": "2021.4.0",
     "arch": [
         "armhf",
         "armv7"
     ],
-    "init": false,
     "ports": {
         "9200/tcp": 9200
     },
