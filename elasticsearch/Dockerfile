@@ -15,6 +15,6 @@ COPY jvm.options.d/jvm.options ${ES_CONF}/jvm.options.d/jvm.options
 
 EXPOSE 9200
 
-RUN "sudo chown -R elasticsearch:elasticsearch /data"
+RUN "chown elasticsearch:elasticsearch -R /data"
 
 
