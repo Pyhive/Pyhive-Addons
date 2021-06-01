@@ -31,7 +31,7 @@ bootstrap.system_call_filter: false
 #
 # Path to directory where to store the data (separate multiple locations by comma):
 #
-path.data: /share/elasticsearch
+path.data: /data/elasticsearch
 #
 # Path to log files:
 #

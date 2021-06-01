@@ -17,10 +17,6 @@
     },
     "host_network": true,
     "apparmor": false,
-    "map": [
-        "addons:rw",
-        "share:rw"
-    ],
     "stage": "experimental",
     "options": {
         "log_level": "warning"
