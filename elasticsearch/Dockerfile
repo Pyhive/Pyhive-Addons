@@ -19,4 +19,10 @@ COPY jvm.options.d/jvm.options ${ES_CONF}/jvm.options.d/jvm.options
 EXPOSE 9200
 
 
+# Copy data for add-on
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
+
 
