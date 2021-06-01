@@ -11,9 +11,9 @@ ENV ES_CONF=/usr/share/elasticsearch/config \
     ES_GID=991 \
     ES_UID=991
 
-COPY elasticsearch.yml ${ES_PATH_CONF}/elasticsearch.yml
-COPY jvm.options ${ES_PATH_CONF}/jvm.options
-COPY jvm.options.d/jvm.options ${ES_PATH_CONF}/jvm.options.d/jvm.options
+COPY elasticsearch.yml ${ES_CONF}/elasticsearch.yml
+COPY jvm.options ${ES_CONF}/jvm.options
+COPY jvm.options.d/jvm.options ${ES_CONF}/jvm.options.d/jvm.options
 
 EXPOSE 9200
 
