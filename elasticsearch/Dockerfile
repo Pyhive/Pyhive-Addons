@@ -5,9 +5,6 @@
 FROM docker.elastic.co/elasticsearch/elasticsearch:7.13.0-arm64
 ARG ELK_VERSION=7.13.0
 LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
-RUN mkdir -p /data/elasticsearch; \
-    chmod -R 0777 /data/elasticsearch;
-
 
 ### Elasticsearch config
 ENV ES_CONF=/usr/share/elasticsearch/config \
@@ -18,3 +15,6 @@ COPY jvm.options ${ES_CONF}/jvm.options
 COPY jvm.options.d/jvm.options ${ES_CONF}/jvm.options.d/jvm.options
 
 EXPOSE 9200
+
+RUN mkdir -p /data/elasticsearch; \
+    chmod -R 0777 /data/elasticsearch;
