@@ -1,8 +1,8 @@
 {
-    "name": "Elasticsearch",
+    "name": "Kibana",
     "version": "dev",
-    "slug": "elasticsearch",
-    "description": "Elasticsearch for storing events",
+    "slug": "kibana",
+    "description": "Kibana Web UI",
     "startup": "application",
     "homeassistant": "2021.4.0",
     "init": false,
@@ -14,7 +14,7 @@
         "5601/tcp": 5601
     },
     "ports_description": {
-        "5601/tcp": "DNS server port"
+        "5601/tcp": "Web UI port"
     },
     "host_network": true,
     "apparmor": false,
