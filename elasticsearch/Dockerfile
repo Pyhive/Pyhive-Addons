@@ -6,7 +6,7 @@ ARG ELK_VERSION=7.13.0
 LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 
 ### Elasticsearch config
-ENV ES_CONF=/etc/elasticsearch \
+ENV ES_CONF=/usr/share/elasticsearch/config \
     ES_HOME=/opt/elasticsearch \
     ES_GID=991 \
     ES_UID=991
