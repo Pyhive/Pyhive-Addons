@@ -6,9 +6,9 @@ FROM docker.elastic.co/elasticsearch/elasticsearch:7.13.0-arm64
 ARG ELK_VERSION=7.13.0
 LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 RUN set -eux; \
-    mkdir -p \
-    /data/elasticsearch \
-    ;
+    mkdir -p /data/elasticsearch; \
+    chown  elasticsearch:elasticsearch -R /data/elasticsearch;
+
 
 ### Elasticsearch config
 ENV ES_CONF=/usr/share/elasticsearch/config \
