@@ -4,7 +4,6 @@
     "slug": "elasticsearch",
     "description": "Elasticsearch for storing events",
     "startup": "application",
-    "boot": "auto",
     "homeassistant": "2021.4.0",
     "arch": [
         "armhf",
