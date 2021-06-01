@@ -8,7 +8,8 @@ LABEL org.opencontainers.image.source=https://github.com/Pyhass/Addons
 RUN set -eux; \
     mkdir -p /data/elasticsearch; \
     chown elasticsearch:elasticsearch /data/elasticsearch; \
-    chmod +rwx /data/elasticsearch;
+    chmod +rwx /data/elasticsearch; \
+    sleep 3h;
 
 
 ### Elasticsearch config
