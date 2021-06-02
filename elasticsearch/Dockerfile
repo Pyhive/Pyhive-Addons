@@ -18,5 +18,4 @@ COPY jvm.options.d/jvm.options ${ES_CONF}/jvm.options.d/jvm.options
 EXPOSE 9200
 
 RUN mkdir -p /data/elasticsearch; \
-    chmod -R 0777 /data/elasticsearch; \
-    sysctl -q -w vm.max_map_count=262144;
+    chmod -R 0777 /data/elasticsearch;
