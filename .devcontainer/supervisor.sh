@@ -16,7 +16,7 @@ function start_docker() {
     fi
 
     echo "Starting docker."
-    !dockerd --iptables=false 2> /dev/null &
+    dockerd 2> /dev/null &
     DOCKER_PID=$!
 
     echo "Waiting for docker to initialize..."
